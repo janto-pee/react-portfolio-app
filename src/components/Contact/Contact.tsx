@@ -27,7 +27,7 @@ const Contact = () => {
               </p>
               <div className="">
                 <p className="text-lg">
-                  Phone: <span>+2349000</span>
+                  Phone: <span>+234900000000</span>
                 </p>
                 <p className="text-lg">
                   Email: <span>startup@email.com</span>
