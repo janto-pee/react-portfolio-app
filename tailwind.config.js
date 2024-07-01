@@ -54,6 +54,7 @@ export default {
       },
       backgroundImage: {
         hero: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/Hero/img-1-105a64ad.jpg')",
+        cardbg: "linear-gradient(45deg, #212430 100%, #212400 0%);",
       },
     },
   },
