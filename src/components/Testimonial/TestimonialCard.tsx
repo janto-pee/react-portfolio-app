@@ -4,19 +4,7 @@ import {
   ChatBubbleLeftIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
-
-export interface TestimonialCardInterface {
-  userImage: string;
-  userCompany: string;
-  userPosition: string;
-  userName: string;
-  id: number;
-  image: string;
-  title: string;
-  subtitle: string;
-  rating: number;
-  comment: string;
-}
+import { TestimonialCardInterface } from "../../data/data";
 
 const TestimonialCard = ({ item }: { item: TestimonialCardInterface }) => {
   return (

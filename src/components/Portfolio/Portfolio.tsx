@@ -1,63 +1,9 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
-import img1 from "../../assets/portfolio/1.jpg";
-import img2 from "../../assets/portfolio/2.jpg";
-import img3 from "../../assets/portfolio/3.jpg";
-import img4 from "../../assets/portfolio/4.jpg";
-import img5 from "../../assets/portfolio/5.jpg";
-import img6 from "../../assets/portfolio/6.jpg";
+
 import { Link } from "react-router-dom";
+import { Portfoio } from "../../data/data";
 
 const Portfolio = () => {
-  const Portfoio = [
-    {
-      id: 1,
-      image: img1,
-      title: "Business Stratagy I throw my self down",
-      views: 20,
-      stack: "Frontend",
-      link: "https://github.com/janto-pee",
-    },
-    {
-      id: 2,
-      image: img2,
-      title: "App Development Lorem, ipsum dolor",
-      views: 20,
-      stack: "Backend",
-      link: "https://github.com/janto-pee",
-    },
-    {
-      id: 3,
-      image: img3,
-      title: "Business Stratagy orem, ipsum lor od",
-      views: 20,
-      stack: "CICD",
-      link: "https://github.com/janto-pee",
-    },
-    {
-      id: 4,
-      image: img4,
-      title: "Mobile App L consec tetur sicing",
-      views: 20,
-      stack: "IaC",
-      link: "https://github.com/janto-pee",
-    },
-    {
-      id: 5,
-      image: img5,
-      title: "SEO Optimisation ectetur adip elit re",
-      views: 20,
-      stack: "Containers",
-      link: "https://github.com/janto-pee",
-    },
-    {
-      id: 6,
-      image: img6,
-      title: "UX Consulting velit andae debitis",
-      views: 20,
-      stack: "cloud",
-      link: "https://github.com/janto-pee",
-    },
-  ];
   return (
     <div id="portfolio" className="bg-neutral-900">
       <div

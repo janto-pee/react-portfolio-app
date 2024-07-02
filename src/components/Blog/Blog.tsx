@@ -1,53 +1,7 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
-import img1 from "../../assets/blog/blog-4.jpg";
-import img2 from "../../assets/blog/blog-5.jpg";
-import img3 from "../../assets/blog/blog-6.jpg";
+import { BlogList } from "../../data/data";
 
 const Blog = () => {
-  const FeaturesList = [
-    {
-      id: 1,
-      image: img1,
-      title: "Business Stratagy I throw my self down",
-      views: 20,
-      stack: "Frontend",
-    },
-    {
-      id: 2,
-      image: img2,
-      title: "App Development Lorem, ipsum dolor",
-      views: 20,
-      stack: "Backend",
-    },
-    {
-      id: 3,
-      image: img3,
-      title: "Business Stratagy orem, ipsum lor od",
-      views: 20,
-      stack: "CICD",
-    },
-    {
-      id: 4,
-      image: img2,
-      title: "Mobile App L consec tetur sicing",
-      views: 20,
-      stack: "IaC",
-    },
-    {
-      id: 5,
-      image: img1,
-      title: "SEO Optimisation ectetur adip elit re",
-      views: 20,
-      stack: "Containers",
-    },
-    {
-      id: 6,
-      image: img3,
-      title: "UX Consulting velit andae debitis",
-      views: 20,
-      stack: "cloud",
-    },
-  ];
   return (
     <div id="blog" className="bg-neutral-900">
       <div
@@ -61,7 +15,7 @@ const Blog = () => {
           My Blog
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-          {FeaturesList.map((item, index) => (
+          {BlogList.map((item, index) => (
             <div
               key={index}
               className="group p-6 bg-[#202328] rounded-lg button-box-shadow4"

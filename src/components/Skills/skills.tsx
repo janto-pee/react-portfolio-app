@@ -1,58 +1,7 @@
-import {
-  ChartPieIcon,
-  BuildingOfficeIcon,
-  BuildingLibraryIcon,
-  BoltIcon,
-  PencilIcon,
-  CalendarDaysIcon,
-  ArrowLongRightIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { SkillsList } from "../../data/data";
 
 const Skills = () => {
-  const SkillsList = [
-    {
-      id: 1,
-      icon: ChartPieIcon,
-      title: "Frontend",
-      content:
-        " specializes in creating and designing the user interface (UI) and user experience (UX) of websites",
-    },
-    {
-      id: 2,
-      icon: BuildingOfficeIcon,
-      title: "Backend",
-      content:
-        "build and maintain the server-side logic, databases, and other components of a website",
-    },
-    {
-      id: 3,
-      icon: BuildingLibraryIcon,
-      title: "Containerization",
-      content:
-        "build standardized packages where components of an app are bundled into a single container image ",
-    },
-    {
-      id: 4,
-      icon: BoltIcon,
-      title: "CI/CD",
-      content:
-        "Build CI/CD pipeline that automates the entire software delivery process from build to deployment",
-    },
-    {
-      id: 5,
-      icon: PencilIcon,
-      title: "Iac",
-      content:
-        "Use Terraform to provision your computing infrastructure instead of manual processes",
-    },
-    {
-      id: 6,
-      icon: CalendarDaysIcon,
-      title: "Cloud",
-      content:
-        "use services such as AWS & Azure for the delivery of hosted computing services over the internet",
-    },
-  ];
   return (
     <div id="skills" className="bg-neutral-900">
       <div

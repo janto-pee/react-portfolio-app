@@ -1,7 +1,8 @@
 import { HashLink as Link } from "react-router-hash-link";
-import { Bars3Icon, SunIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import FixedNavbar from "../../utils/FixedNavbar";
+import { SunIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className={`w-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-md ${
+      className={`w-full bg-neutral-900 text-white ${
         isVisible ? "fixed top-0 left-0 z-50 shadow-2xl" : "static"
       }`}
     >
@@ -60,7 +61,7 @@ const Navbar = () => {
             <Link
               smooth
               to="#contact"
-              className="hidden xl:flex px-8 py-4 rounded-md text-secondary-500 button-box-shadow4 bg-[#202328]"
+              className="hidden xl:flex px-8 py-4 rounded-md text-secondary-500 button-box-shadow4 bg-[#202328] "
             >
               ✍️ CONTACTS
             </Link>

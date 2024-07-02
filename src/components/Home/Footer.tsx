@@ -1,26 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
-
-const navigation = {
-  solutions: [
-    { name: "Marketing", href: "/" },
-    { name: "Analytics", href: "/" },
-    { name: "Commerce", href: "/" },
-    { name: "Insights", href: "/" },
-  ],
-  support: [
-    { name: "Pricing", href: "/" },
-    { name: "Documentation", href: "/" },
-    { name: "Careers", href: "/", info: " We're hiring" },
-    { name: "API Status", href: "/" },
-  ],
-  socials: [
-    { name: "facebook", href: "/", info: "/social/facebook.svg" },
-    { name: "twitter", href: "/", info: "/social/twitter.svg" },
-    { name: "github", href: "/", info: "/social/github.svg" },
-    { name: "slack", href: "/", info: "/social/slack.svg" },
-  ],
-};
+import { navigation } from "../../data/data";
 
 const Footer = () => {
   const newDate = new Date().getFullYear();
@@ -56,7 +36,7 @@ const Footer = () => {
                 <p key={index}>
                   <Link
                     className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                    to="/"
+                    to={item.href}
                   >
                     {item.name}
                   </Link>
