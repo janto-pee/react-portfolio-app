@@ -1,4 +1,4 @@
-import image1 from "../../assets/banner-02.jpg";
+import image1 from "../../assets/banner-02c.png";
 import Typewriter from "typewriter-effect";
 import Icon from "./Icon";
 
@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <div id="hero" className="bg-neutral-900">
       <div className="max-w-7xl mx-auto w-full ">
-        <div className="flex flex-col-reverse lg:flex-row justify-between py-10 lg:py-36 gap-4 lg:gap-8 xl:gap-12 border-b border-black">
+        <div className="flex flex-col-reverse lg:flex-row justify-between py-10 lg:py-28 gap-4 lg:gap-8 xl:gap-12 border-b border-black">
           {/* first col */}
-          <div className="lg:basis-3/5 py-10 px-4 lg:px-8">
+          <div className="lg:basis-3/5 py-10">
             <h5 className="text-neutral-400">🖐️ WELCOME TO MY WORLD</h5>
             <div className="text-4xl md:text-6xl text-neutral-50 font-bold dark:text-gray-900 mt-8">
               <h2 className="my-4 ">

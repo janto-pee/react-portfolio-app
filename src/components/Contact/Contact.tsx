@@ -5,7 +5,10 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <div id="contact" className="bg-neutral-900">
-      <div className="max-w-7xl mx-auto  py-10 xl:py-20 text-center border-b border-black px-4">
+      <div
+        data-aos="fade-up"
+        className="max-w-7xl mx-auto px-4 lg:px-0 py-10 xl:py-20 text-center border-b border-black"
+      >
         <h3 className="text-secondary-500 text-lg">CONTACT</h3>
         <h2 className="mt-8 mb-16 text-neutral-300 text-2xl xl:text-6xl font-semibold ">
           Contact Me Today

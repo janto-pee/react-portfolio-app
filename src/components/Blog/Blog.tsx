@@ -50,7 +50,10 @@ const Blog = () => {
   ];
   return (
     <div id="blog" className="bg-neutral-900">
-      <div className="max-w-7xl mx-auto py-10 xl:py-20 px-4 text-center border-b border-black">
+      <div
+        data-aos="fade-up"
+        className="max-w-7xl mx-auto py-10 px-4  lg:px-0 xl:py-20 text-center border-b border-black"
+      >
         <h3 className="text-secondary-500 text-lg">
           VISIT MY BLOG AND KEEP YOUR FEEDBACK
         </h3>

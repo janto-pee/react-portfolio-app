@@ -34,8 +34,8 @@ const Navbar = () => {
               <Link smooth to="#navbar">
                 HOME
               </Link>
-              <Link smooth to="#features">
-                FEATURES
+              <Link smooth to="#skills">
+                SKILLS
               </Link>
               <Link smooth to="#portfolio">
                 PORTFOLIO

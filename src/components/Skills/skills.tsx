@@ -54,13 +54,19 @@ const Skills = () => {
     },
   ];
   return (
-    <div id="features" className="bg-neutral-900">
-      <div className="text-center max-w-7xl mx-auto py-16 xl:py-20 px-4 border-b border-black">
+    <div id="skills" className="bg-neutral-900">
+      <div
+        data-aos="fade-up"
+        className="text-center max-w-7xl mx-auto py-16 xl:py-20 px-4 lg:px-0 border-b border-black"
+      >
         <h3 className="text-secondary-500 text-lg">🦺 SKILLS</h3>
         <h2 className="my-8 uppercase text-neutral-200 text-3xl xl:text-6xl font-semibold ">
           What I do
         </h2>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+        <div
+          className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12"
+          data-aos="fade-up"
+        >
           {SkillsList.map((item, index) => (
             <div
               key={index}
