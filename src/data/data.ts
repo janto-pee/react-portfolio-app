@@ -22,6 +22,19 @@ import blogImg1 from "../assets/blog/blog-4.jpg";
 import blogImg2 from "../assets/blog/blog-5.jpg";
 import blogImg3 from "../assets/blog/blog-6.jpg";
 
+export interface NavbarInterface {
+  name: string;
+  href: string;
+}
+export const navabr: NavbarInterface[] = [
+  { name: "home", href: "/" },
+  { name: "skills", href: "#skills" },
+  { name: "portfolio", href: "#portfolio" },
+  { name: "resume", href: "#resume" },
+  { name: "testimonial", href: "#testimonial" },
+  { name: "blog", href: "#blog" },
+  { name: "others", href: "#footer" },
+];
 export interface navigationInterface {
   solutions: {
     name: string;

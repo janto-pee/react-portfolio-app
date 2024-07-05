@@ -2,7 +2,8 @@ import { HashLink as Link } from "react-router-hash-link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import FixedNavbar from "../../utils/FixedNavbar";
-import { SunIcon } from "@heroicons/react/24/outline";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { navbar } from "../../data/data";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -32,32 +33,24 @@ const Navbar = () => {
           {/* row 2 */}
           <div className="flex gap-8 items-center text-neutral-500 ">
             <div className="hidden xl:flex gap-4 2xl:gap-8 items-center">
-              <Link smooth to="#navbar">
-                HOME
-              </Link>
-              <Link smooth to="#skills">
-                SKILLS
-              </Link>
-              <Link smooth to="#portfolio">
-                PORTFOLIO
-              </Link>
-              <Link smooth to="#resume">
-                RESUME
-              </Link>
-              <Link smooth to="#testimonial">
-                TESTIMONIAL
-              </Link>
-              <Link smooth to="#blog">
-                BLOG
-              </Link>
-
-              <Link smooth to="#footer">
-                OTHERS
-              </Link>
+              {navbar.map((item, index) => (
+                <Link
+                  key={index}
+                  smooth
+                  to={item.href}
+                  className="cursor-pointer capitalize hover:text-neutral-100 transition-all delay-300 ease-in-out"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
-            <button className="rounded-full bg-[#1D2024] p-2 button-box-shadow4">
-              <SunIcon className="h-6 w-6 text-neutral-50" aria-hidden="true" />
-            </button>
+            <a
+              href="/src/assets/CV/front-end-developer.pdf "
+              className="rounded-md lg:rounded-full bg-[#1D2024] p-2 button-box-shadow4"
+              download
+            >
+              <ArrowDownTrayIcon className="w-4 text-secondary-500" />
+            </a>
             <Link
               smooth
               to="#contact"
@@ -81,28 +74,16 @@ const Navbar = () => {
                 <XMarkIcon className="w-6 h-6 my-4 ml-auto" />
               </button>
               <div className="mt-4 flex flex-col space-y-4">
-                <Link smooth to="#navbar">
-                  HOME
-                </Link>
-                <Link smooth to="#features">
-                  FEATURES
-                </Link>
-                <Link smooth to="#portfolio">
-                  PORTFOLIO
-                </Link>
-                <Link smooth to="#resume">
-                  RESUME
-                </Link>
-                <Link smooth to="#testimonial">
-                  TESTIMONIAL
-                </Link>
-                <Link smooth to="#blog">
-                  BLOG
-                </Link>
-
-                <Link smooth to="#footer">
-                  OTHERS
-                </Link>
+                {navbar.map((item, index) => (
+                  <Link
+                    key={index}
+                    smooth
+                    to={item.href}
+                    className="cursor-pointer capitalize hover:text-neutral-100 transition-all delay-300 ease-in-out"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
