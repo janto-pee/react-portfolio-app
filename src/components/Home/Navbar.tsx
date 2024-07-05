@@ -27,7 +27,7 @@ const Navbar = () => {
               alt=""
               className="w-8 lg:w-12 rounded-full border border-neutral-500"
             />
-            <span>Rapid Startup 🔥</span>
+            <span>Janto Pee 🔥</span>
           </Link>
 
           {/* row 2 */}

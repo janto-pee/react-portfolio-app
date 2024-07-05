@@ -20,7 +20,7 @@ const Footer = () => {
                 href="#"
                 aria-label="logo"
               >
-                Startup Club
+                Janto Pee
               </a>
             </div>
             <div className="text-white w-48 mt-20">
