@@ -26,7 +26,7 @@ export interface NavbarInterface {
   name: string;
   href: string;
 }
-export const navabr: NavbarInterface[] = [
+export const navbar: NavbarInterface[] = [
   { name: "home", href: "/" },
   { name: "skills", href: "#skills" },
   { name: "portfolio", href: "#portfolio" },

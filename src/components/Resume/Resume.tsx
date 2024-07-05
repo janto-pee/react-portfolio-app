@@ -1,6 +1,6 @@
 import {
   BackwardIcon,
-  BugAntIcon,
+  CheckBadgeIcon,
   StarIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -34,7 +34,7 @@ const Resume = () => {
               }}
               date="2011 - present"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<BugAntIcon />}
+              icon={<CheckBadgeIcon />}
             >
               <h3 className="vertical-timeline-element-title">
                 Software Engineer
@@ -50,7 +50,7 @@ const Resume = () => {
               date="2010 - 2011"
               dateClassName="text-white"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<BugAntIcon />}
+              icon={<CheckBadgeIcon />}
               contentStyle={{
                 boxShadow:
                   "rgba(3, 3, 3, 0.48) 6px 2px 8px 0px, rgba(107, 107, 107, 0.8) -1px -1px 4px 1px",
@@ -72,7 +72,7 @@ const Resume = () => {
               date="2008 - 2010"
               dateClassName="text-white"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<BugAntIcon />}
+              icon={<CheckBadgeIcon />}
               contentStyle={{
                 boxShadow:
                   "rgba(3, 3, 3, 0.48) 6px 2px 8px 0px, rgba(107, 107, 107, 0.8) -1px -1px 4px 1px",
@@ -91,7 +91,7 @@ const Resume = () => {
               date="2006 - 2008"
               dateClassName="text-white"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<BugAntIcon />}
+              icon={<CheckBadgeIcon />}
               contentStyle={{
                 boxShadow:
                   "rgba(3, 3, 3, 0.48) 6px 2px 8px 0px, rgba(107, 107, 107, 0.8) -1px -1px 4px 1px",
