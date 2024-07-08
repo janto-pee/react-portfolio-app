@@ -5,8 +5,8 @@ import Icon from "./Icon";
 const Hero = () => {
   return (
     <div id="hero" className="bg-neutral-900">
-      <div className="max-w-7xl mx-auto w-full px-4 lg:px-0 ">
-        <div className="flex flex-col-reverse lg:flex-row justify-between py-10 lg:py-28 gap-4 lg:gap-8 xl:gap-12 border-b border-black">
+      <div className="max-w-7xl mx-auto w-full px-4 lg:px-8 xl:px-0">
+        <div className="flex flex-col-reverse lg:flex-row justify-between py-10 lg:py-20 xl:py-28 gap-4 lg:gap-8 xl:gap-12 border-b border-black">
           {/* first col */}
           <div className="lg:basis-3/5 py-10">
             <h5 className="text-neutral-400">🖐️ WELCOME TO MY WORLD</h5>
@@ -24,13 +24,13 @@ const Hero = () => {
                 />
               </p>
             </div>
-            <p className="my-8 text-lg text-neutral-400 max-w-xl md:max-w-2xl">
+            <p className="my-8 text-lg text-neutral-400 max-w-xl md:max-w-2xl ">
               Highly competent Software Engineer with over four years of
               experience, spearheading the development of large-scale software
               solutions and deploying intuitive solutions to meet customer
               design requirements.
             </p>
-            <div className="max-w-[10rem] md:max-w-xl flex flex-col justify-start md:flex-row gap-8 md:justify-between items-center text-neutral-400">
+            <div className=" max-w-lg md:max-w-xl flex flex-col justify-start items-start md:flex-row gap-8 md:justify-between md:items-center text-neutral-400 ">
               <Icon item1 title1 />
               <Icon item2 title2 />
             </div>

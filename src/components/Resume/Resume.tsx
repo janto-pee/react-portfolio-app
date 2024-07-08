@@ -12,7 +12,7 @@ import "react-vertical-timeline-component/style.min.css";
 const Resume = () => {
   return (
     <div id="resume" className="bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 lg:px-0 py-16 xl:py-20 border-b border-black text-center">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 xl:px-0 py-16 xl:py-20 border-b border-black text-center">
         <h3 className="text-secondary-500 text-lg uppercase">
           7 Years of experience
         </h3>
