@@ -16,7 +16,10 @@ const Portfolio = () => {
         <h2 className="mt-8 mb-16 uppercase text-neutral-300 text-3xl xl:text-6xl font-semibold ">
           My Portfolio
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12"
+        >
           {Portfoio.map((item, index) => (
             <div
               key={index}

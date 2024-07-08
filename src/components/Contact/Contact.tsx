@@ -13,7 +13,10 @@ const Contact = () => {
         <h2 className="mt-8 mb-16 text-neutral-300 text-2xl xl:text-6xl font-semibold ">
           Contact Me Today
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 xl:gap-12">
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 xl:gap-12"
+        >
           <div className="col-span-1 group px-6 py-6 bg-[#202328] rounded-md button-box-shadow4">
             <img
               src={img1}

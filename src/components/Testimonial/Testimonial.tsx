@@ -6,7 +6,7 @@ import TestimonialCard from "./TestimonialCard";
 import { TestimonialList } from "../../data/data";
 
 const Testimonial = () => {
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 1000,

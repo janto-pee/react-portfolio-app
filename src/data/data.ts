@@ -75,7 +75,7 @@ export const navigation: navigationInterface = {
 
 export interface skillsListInterface {
   id: number;
-  icon: any;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
   content: string;
 }
