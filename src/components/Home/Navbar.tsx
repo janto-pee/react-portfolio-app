@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link smooth to="#navbar" className="flex items-center gap-2">
             <img
               src="/Image-7.png"
-              alt=""
+              alt="hero image"
               className="w-8 lg:w-12 rounded-full border border-neutral-500"
             />
             <span>Janto Pee 🔥</span>
@@ -66,7 +66,7 @@ const Navbar = () => {
           {/* mobile menu */}
           <div
             className={`absolute right-0 top-0 bg-neutral-900 text-neutral-50 p-4 min-h-screen w-2/3 ${
-              openNav ? "flex" : "hidden"
+              openNav ? "flex z-50" : "hidden"
             }`}
           >
             <div>
