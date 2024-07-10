@@ -80,6 +80,7 @@ const Navbar = () => {
                     smooth
                     to={item.href}
                     className="cursor-pointer capitalize hover:text-neutral-100 transition-all delay-300 ease-in-out"
+                    onClick={handleNav}
                   >
                     {item.name}
                   </Link>
