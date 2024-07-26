@@ -6,7 +6,7 @@ const Footer = () => {
   const newDate = new Date().getFullYear();
   return (
     <div id="footer" className="w-full bg-neutral-900">
-      <div className="container py-10 px-4 sm:px-6 lg:px-8 lg:py-20 mx-auto">
+      <div className="w-full p-6 lg:px-8 xl:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 ">
           <div className="col-span-full lg:col-span-1">
             <div className="flex items-center">
