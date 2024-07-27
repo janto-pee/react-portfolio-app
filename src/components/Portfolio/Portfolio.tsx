@@ -8,7 +8,7 @@ const Portfolio = () => {
     <div id="portfolio" className="bg-neutral-900">
       <div
         data-aos="fade-up"
-        className="max-w-7xl mx-auto py-20 px-4 lg:px-8 xl:px-0 text-center border-b border-black"
+        className="max-w-7xl mx-auto py-20 px-4 lg:px-8 xl:px-16 text-center border-b border-black"
       >
         <h3 className="text-secondary-500 text-lg">
           💎 VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK

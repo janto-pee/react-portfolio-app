@@ -20,7 +20,7 @@ const Testimonial = () => {
     <div id="testimonial" className="bg-neutral-900 overflow-hidden">
       <div
         data-aos="fade-up"
-        className="max-w-7xl mx-auto px-4 lg:px-8 xl:px-0 py-10 xl:py-20 text-center border-b border-black"
+        className="max-w-7xl mx-auto px-4 lg:px-8 xl:px-16 py-10 xl:py-20 text-center border-b border-black"
       >
         <h3 className="text-secondary-500 text-lg">WHAT CLIENT SAY</h3>
         <h2 className="my-8 uppercase text-neutral-200 text-3xl xl:text-6xl font-semibold ">
