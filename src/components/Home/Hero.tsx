@@ -5,7 +5,7 @@ import Icon from "./Icon";
 const Hero = () => {
   return (
     <div id="hero" className="bg-neutral-900">
-      <div className="max-w-7xl mx-auto w-full px-4 lg:px-8 xl:px-0">
+      <div className="max-w-7xl mx-auto w-full px-4 lg:px-8 xl:px-16">
         <div className="flex flex-col-reverse lg:flex-row justify-between py-10 lg:py-20 xl:py-28 gap-4 lg:gap-8 xl:gap-12 border-b border-black">
           {/* first col */}
           <div className="lg:basis-3/5 py-10">
