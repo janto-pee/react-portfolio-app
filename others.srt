@@ -1,0 +1,1153 @@
+introduction
+
+hello guys and welcome to this project tutorial where you will build this responsive portfolio website with react
+
+Whether you're a busy developer looking to develop a quick but stunning portfolio website or you're a new to web developement
+
+there is something for you. and by the way, being
+
+mobile responsive means it'll provide your users with the best experience no matter which device they use
+
+Now, This project const of an
+
+appealing hero section, a skills section to showcase all your skills, a portfolio section showing a list of projects, 
+
+a testimonial section to display reviews and rating from previous clients, a blog section and a contact section.
+
+And at the end of this project, you will deploy to cloudflare
+
+
+Let’s take a look at the structure of this tutorial.
+
+You will start with react project architecture and setup, So I'll explain some very basic concepts of react
+
+such as project initiation with vite, installation of essential dependencies, dev dependencies and more
+
+then we'll move to the project layout, creating components and on-page-smooth routing
+
+
+I have setup this project in a way that, the lessons learned here are fast to learn, 
+
+concept can be deeply understood, and retained for longer
+
+At the end of this tutorial you'll learn tailwindcss, animation, react routing, typescript, cloudflare and more
+
+So it's absolutely a loaded project and I really hope you enjoy it and get lots of value.
+
+Before we dive in, the assets used in this project can be found on my github repo with link below
+
+so feel free to clone this github repo and don't forget to give a star.
+
+Without further delay, let's jump in
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Setup
+
+Create a new empty folder on your desktop,
+
+let's call this portfolio app, I will be using vscode as my editor and you can do so too.
+
+but if you're familiar with other text editor such as sublime, notepad++, and atom. 
+
+feel free to use them.
+
+if you're new to web development, ill recommend VSCode. Vscode also known as 
+
+Visual Studio code is the most popular editor out there with built-in
+
+terminal and a variety of extensions and shortcuts that
+
+you can use, so if you don't have it already,  please proceed to download and install
+
+another important thing
+
+you need before we begin is node.js. 
+
+nodejs is a JavaScript runtime environment that's going to allow us to run and create our project so 
+
+download the recommended version for your own operating system
+
+
+
+
+once you're done,
+
+click to open the vscode 
+
+and now drag and drop the app folder into the open Visual Studio code window 
+
+once you're here you can go to view,
+
+and then terminal to open Visual Studio codes built-in terminal to create
+
+our application we're going to use a tool called Veet
+
+Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects
+
+vite consists of two major parts:
+
+A dev server that provides rich feature enhancements over native ES modules,
+
+A build command that bundles your code with Rollup
+
+and don't worry if you don't have any experience with vite so far you can click getting started right here which is
+
+going to lead you to their documentation.
+
+you can take your time to go through the documentation 
+
+to learn more about what's possible in the Vite Features Guide, its Support for frameworks .
+
+or integration with other tools through Plugins
+
+but if you would like to just dip your toes in with this video you can do that without any prerequisites just the basic
+
+basics of react so let's go ahead and click get started and we can immediately move to
+
+installation.
+
+so let's go ahead and copy this Command right here npm create vite@latest go back to our
+
+terminal paste it, enter and press dot slash to create it in the current repository 
+
+it is going to open up a questionnaire to set up our app. vite will ask 
+
+to confirm package name, enter to continue.
+
+
+select a framework, select React
+
+we will use typescript but once again don't be scared if you haven't used it before
+
+this is going to be beginner friendly
+
+so let's select Typescript variant. vite has successfully scafolded our app in little to no time
+
+now lets run npm install to install the dependency
+
+
+
+
+
+
+
+you're going to create the entire UI of this application using Tailwind so justlike we did for vite, 
+
+lets visit the tailwind docuentation to see how to add tailwind to our project. As you can see, 
+
+we have already completed the first step which is to create the react project with vite.
+
+Next is to install tailwindcss by coping the commands npm install -D tailwindcss postcss autoprefixer npx tailwindcss init -p and paste on the terminal
+
+Next step is to configure your template paths, Add the paths to all of your template files in your tailwind.config.js file.
+
+step 4 is to  Add the Tailwind directives to your CSS by copying and pasting to the index.css file in the source folder. 
+
+so let's copy, 
+
+        make sure you delete everything in index.css file, then paste the copied directives
+
+now you can run the code in the terminal by running mpm run Dev
+
+this is going to spin up our application on Local Host 5172 or 3 and then simply hold
+
+control or command and click this link,
+
+it's going to open it up right within your browser and you'll have the vite starter interface
+
+now that our app is up and running
+
+We can change the content on this interface by changing the content on the App.tsx as seen here. 
+
+Let's copy this and paste in App.tsx
+
+that's going to say hello world and it's going to have a class name equal to text-3xl font-bold and underline to underline the text
+
+and if we save this and go back you should be able to see our bold hello world being underlined
+
+
+
+
+
+
+
+Also, the second customization that's going to support our global. CSS are custom colors in the Tailwind dot config file 
+
+which can be found in the same GitHub repo, 
+
+you will see the colors that we're going to use within our application, 
+
+so every time you want to use this variant of green you don't
+
+
+have to spell it out but rather you text green 50 as simple as that and
+
+
+this concept is called theming within Tailwind
+
+
+now copy the  starting from the extend and paste in our tailwind.config.js file
+
+
+The advantage of this is that we can change the secondary and primary colors at once in a single tailwind dot config file
+
+
+
+
+
+
+
+
+To make our life easy, lets install the Tailwind wind CSS intellisence extension within the Visual Studio code  extension tab
+
+
+it's going to tell you exactly which CSS properties each class is applying so if you're new to Tailwind
+
+it's going to be quite useful 
+
+I have it installed already, so i will proceed to the App.tsx file,  
+
+let's put our editor side by side by our browser so that we can see the changes we make live 
+
+there we go and we can see our hello world let's also provide it a text-secondary-500 which is just going to
+
+change the text color to the secondary color . 
+
+
+
+
+
+
+with that completed, let's start by installing all the dependencies that we will be using in the project at once. 
+
+copy the dependency names, split the terminal and run npm i right click and paste all the package name to install at once.
+
+same way install the dev dependencies, copy, npm i -D right click then paste and enter
+
+Now that we have all our package installed, we are ready to start creating the base file of our app
+
+
+
+
+
+
+
+
+
+
+Components setup(348 - 394)
+
+First things first, let's setup our folder structure before we configure routing.
+
+
+inside of the source folder, let's create a folder called components. the compoenents folder 
+
+
+will contains the indivual sections that make up the portfolio app.
+
+
+inside of the component folder, create a folder called hero, and inside this hero, lets create a file hero.tsx.
+
+
+tsx is the typescript extension of  jsx. 
+
+
+Now run rafce to get react arrow function short code
+
+rafce is made available by a vscode extension called ES7+ React/Redux/React Native Snippets. 
+
+
+if you dont have it installed, please install now to be able to use react snippets
+
+
+So lets create folder for other sections.
+
+
+let's create a folder called skills, and inside skills create skills.tsx, 
+
+create resume slash  resume.tsx
+
+create portfolio folder slash portfolio.tsx
+
+blog slash blog dot tsx.
+
+testimonial then testimonials.tsx
+
+
+create contact then contact.tsx, 
+
+
+Also, We can have more than one file in a folder, for instance
+
+inside the hero folder, let's create Navbar.tsx and Footer.tsx then run rafce to get our react boilerplate code
+
+Now we have our components.
+
+
+
+
+
+
+under the src directory, just like we created the component folder, lets create views folder.
+
+the views folder will contain the different pages or routes for the web app.
+
+in our case, the view will have two pages. first is the Home page. 
+
+Let's create home, then home.tsx. rafce for react snippets
+
+and now in home, let's import our components here one after the other to make the home page, 
+
+we're going to wrap all components with a single empty tag, then Navbar a self-closing component section then we
+
+have the Hero also self closing tag we have the Skills, we have the
+
+Portfolio, resume, tesimonial, blog and finally we have the Contact self closing tag with the import statement at the top.
+
+
+
+Let's create the second view, and again inside the views, create a folder caled NotFound, inside Notfound, create Notfound.tsx
+
+rafce and a simple text Page not found
+
+
+Now that we have the pages views set up, lets confiure routing. First thing, under source, create a folder called routes
+
+
+inside, create allroutes.tsx
+
+This is where we will write all routing logic
+
+
+now Inside the allroutes.tsx, run rafce 
+
+
+import Routes and Route from react-router-dom
+
+
+now we will create the routes like this. inside the return bracket, 
+
+
+create routes tag with an s because it can take more than one route but In this case, we have two.
+
+
+The Home and the Notfound.
+
+
+for the home route, create a route tag with a path of slash 
+
+and specify the element or view to display in this case Home View
+
+
+for the not found view, create a route tag, specify routepath with a star to indicate other routes, 
+
+then specify the element or vew to display and in this case NotFound View.
+
+
+
+Having configured the routes, let's go Inside of the App.tsx and import the Allroutes file to display our views. then
+
+proceed to the main.tsx and wrap the self closing app tag with <BrowserRouter> from react router dom to enable to the setup
+
+yeah, the routing setup is complete
+
+so lets test this. You can seee if we go the the localhost 5173, we can see the home view but if we go to any other url, then we will see the notfound view
+
+
+and this means that we are ready to get started with each section
+
+youcan close all tabs,and put our browser side by side with the editor to be
+
+able to see the changes that we make in our code.
+
+
+This nine pieces of text will soon become the entire application that you can see right here on the screen so let's start with the Navbar component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Navbar
+
+
+let's create a div tag with a class name equal w-full for width full, bg-neutral-900 for a dark background, and text-white to set the text color to white.  
+
+
+within it, we can create a div container and give it a class of w-full, p-6 to add a padding of 1.5rem on all sides. lg:px-8 to increase the padding on a large screen,  and on extra largescreen, let set px to 16, which is to add a padding of 4rem on the left and right
+
+
+let have a div with a class of flex to display flex, items center and
+justify between. we can also give a gap of 2. Inside here, we will have 3 items, the navicon and the right links with button as well as the mobile menu
+
+
+we are starting to create the basic structure for what's yet to become our navigation bar within it we can create
+
+
+our first link, a link pointing to home so what we can do is simply create
+
+
+a link component and again we have to import this from react router so 
+
+
+click enter to automatically import it from react router link
+
+
+if the automatic import does not work, then manually type import link from react router link.
+
+
+every link needs to have where is it pointing to and in this case it's going to point to home, we can use forward slash to denote the homepage
+
+
+inside the link, we don't want to say home, that's not cool,
+
+ what we want to do is to show the logo or image of our
+
+
+application and its name . the easiest way for you to get the assets and images used is from the gothub repo
+
+
+so simply copy that asset folder, unzip it and then paste it in the source folder to sit on the component folder. You can also put images in the public folder like we have done for the hero image.
+
+
+All these assets and images will help to give life to our application  so now instead of home we can rather render an image 
+
+Let provide the image source  from the puvblic folder 
+
+/Image-7.png, we we can also give it an alternative text of
+
+hero image and add tailwindcss classes to style the image
+
+
+let's give it a width of w-8, lets make it lg:w-12 on large screen, and  rounded-full
+
+
+we can also give it a class of border and border color of border-neutral -500 
+
+
+we can also add the name of the portfolio using the span tag, give it a name,(Janto Pee)  then close the span tag 
+
+We can add a simple emoji together with the name by going to emojipedia.org site, select an emoji, copy and paste emoji beside the name
+
+
+now, lets create the right part of the navbar. 
+
+let me create a div with a class of flex to display flex on all screen, gap 8 , align items center, and a text color of text-neutral-500
+
+we are going to have three components here. The navlink, the buttons and the mobile toggle icon.
+
+
+create a div to wrap our list of links. let give it a 
+
+
+class name equal to hidden usually it's going to be hidden on small screens but display flex on extral large screen
+
+
+a gap of 4 and on 2xl:gap of 8 to add some spacing between the elements and then on
+
+
+large devices it's going to be Flex meaning it's going to be visible on large devices let me show you what I
+
+mean on the displayed application you cannot see the links here but as you expand it to large screen you can see
+
+
+all of these amazing links appear so that's exactly what we have done with this div by giving it a hidden property
+
+
+and then Flex on large devices. and this is known as  responsiveness
+
+
+now here here we have a lot of these links that we want to Loop over and what you could do is technically create an
+
+
+array right here  but we
+
+
+dont want to mix data  with our presentation
+
+
+which is the UI that we have here so what you can do is to go to the repo and copy the data.ts. 
+
+Note the data.ts is just an array of item. There is no code in it and 
+
+i've made this available so as not to prolong the length of the video over a simple of array of items.
+
+so let's go to our files and folders
+
+
+collapse everything and create data slash data.ts to create a  new folder called
+
+
+data and then within it a new data.ts 
+
+
+once again trust me there is nothing useful here, this is just some array data that
+
+
+we're mapping over, 
+
+        map is an array method that calls a provided
+        
+        callback function once for each element in an array
+        
+ so let me show you what we're going to do right now
+
+open curly brackets, navbar, click to import the navbar list from the data.
+
+
+if the intellisense doesn't work, you can import it yourself by typing
+
+
+import navbar from data/data.ts as seen here.
+
+
+navbar dot map, parenthesis, then a callback function.
+
+This callback function will take the item and index of each item
+
+
+and return something so keep in mind here is not a curly
+
+
+brace rather it's just a parenthesis which means that we have an immediate return 
+
+so what are we returning for each
+
+
+one of these items well it's going to be a link component
+
+
+Now there is something i want to show you here
+
+
+as we press link, the intellisense bring two types of link, 
+
+        first from react router dom and 
+        second from hashlink.
+
+while the first  for react router dom routes to a separate page, 
+
+hash link routes to the same page
+
+
+If you notice on this demo, it routes to a specific component on the same page.
+
+for onpage routing, we can use Hashlink 
+
+now click enter on the hashlink from react router haslink  to import it
+
+we can delete the previous link and rename hashlink as Link, then. This will still work perfectly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+link is going to render item.name and will have a key of index
+
+and point to item dot href. let's give it an attribute smooth
+
+
+we also want to add some styling so what we can do is give it a class
+
+
+name and that class name is going to be equal to cursor pointer to
+
+indicate that it is clickable
+
+capitalize, on hover, let's make it text-neutral-100 to change text color on hover
+
+
+transition all, delay-300 and ease in out so now you can see that
+
+
+these look a bit different and once you hover it actually looks great 
+
+
+
+
+
+
+we can see all the links on the right side what is missing is the download button that you can see right here so 
+
+we're going to add that right here below the
+
+
+div link by creating an anchor tag with the path to the file, that is  src/assets/cv folder. 
+
+now let's give it a clasname of rounded-md lg rounded full to make it fully rounded on larger screens p-2 and a shadow-lg
+
+hold on we can change the link to uppercase or capitalize, feel free to try aand use any.
+
+inside the anchor tag, let's add a download icon, 
+
+
+so go to hero icons and search for a download icon, here it is caled ArrowDownTray, 
+
+remember we have installed hero icon earlier as part of thepackage,
+
+so we can import ArrowDownTrayIcon from heroicon and give a classname of w-6 h-4 and a color of text-secondary-500 
+
+lets add a unique box shadow inside the App.css 
+
+and add a class of  dot button box shadow, curly bracket then 
+box shadow of rgba (3,3,3, 0.48) 6px 2px 8px 0px,rgba (107,107,107, 0.8) -1px -1px 4px 1px
+
+import it into App dot tsx to make it available in the app. 
+
+Now you can use this classs anywhere in the component 
+
+for instance, in the navbar.tsx, 
+
+
+lets add a button box shadow to the anchor tag, we can also add an attribute download equal true. now if we click it, it will download the corresponding file
+
+download equals true is the same as download.
+
+
+under the download tag, lets create a contact button to scroll users to the contact section.
+
+create Link with an attribute smooth, to equal to #contact and a classname of hidden to hide on small screen 
+
+but display flex on extra large screen px-8 and py-4 rounded-md and text color of text-secondary 500 then the custom  button box shadow
+
+
+Let create a mobile nav icon on small screens with the button tag
+
+let give the button a class of xl:hidden 
+
+to hide it on xl screeens. This button will only be seen on screen sizes less than xl.
+
+we can go to emojipedia to copy and paste an emoji here
+
+
+If you notice in the demo, we have this beautiful menu bar icon on mobile device, to get this, 
+
+lets go to hero icon, search for Bars3Icon, create Tag <Bar3Icon, react should provide intellisense whether solid or outline. select the outline and close the tag. lets give the icon a class of w-6, h-6, and text secondary-500
+
+
+
+
+(mobile nav)
+under the mobile bar comment, let's create an interactive mobile menu bar that can oipen and close on click.
+
+  
+create a div with a class of absolute to position absolute, right 0 top 0 bg neutral -900 text neutral-50  p-4, min-h-screen and w-2/3
+
+create a div with a close button, inside the button, we need a closing icon, if you go to hero icon, search for XMarkIcon,
+
+<XMarkIcon tag with a class of w-6, h-6, my-4 to give a margin top and bottom, ml auto
+
+let have a div under the button with a class of mt-4, flex to display flex, flex-col and space-y-4 to add spacing.
+
+lets copy the navbar list and paste here to map over the list and return each item
+
+
+for now, let's add a class hidden to hide the mobile  before we write the logic dispay the mobile navbar
+
+lets create a state called openNav
+
+const [open, nav, setOpenNav]= useState(false)
+
+that is, we are setting the state of the openNav to false
+
+dont forget to import usestate from react
+
+the reason why we need a state is to conditionally render the navbar. for instance, 
+
+if openNav is false, navbar will be hidden but if openNav is true, then navbar will be displayed
+
+having created the state, lets 
+
+create an arrow function to toggle the state on click
+
+const handlenav then arrow function to return
+
+setOpenNav to toggle openNav
+
+now when this function is called, it changes the state of openNav from true to false and vice versa
+
+now lets add the handle function to the nav button to toggle the openNav on click
+
+on the nav bar button give it an onclick handleNav, same with the button for close.
+
+Now lets display the mobile nav using the state of the app, 
+
+in the class, let use template string to conditionally add css to the div
+
+template string are literals delimited with backtick characters. so let's use backticks and 
+
+give an expression, curly brackets, backticks and the expression, when
+
+openNav == true? 'flex z-50' : 'hidden
+
+now if we test this, it works
+
+we can also add onclick to the link so that it can change the state of the navbar on click
+
+we can also add a capitalize to the link 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+============================================================
+
+
+Hero section
+
+lets create a div and give it a class 
+
+
+name of background neutral 900 just so we can see the
+
+
+section and let's have a container div and give a class of w-full for full width , maximum width 7xl, mx-auto to centralize the div left and right, px-4, lg:px-8 to increase the left and right padding on large screen and xl:px-0.
+
+so as you can see we have added a lot of different responsive classes to this so we sure it looks good on all
+
+
+so now within this section we can have a div and this div is going to have
+
+a class name of flex flex-col so the
+
+
+elements appear in a column on small to medium screen, flex-row on large screen, 
+
+
+justify between to separte element apart. we can give it a gap of 4 to provide some 
+ 
+let's give a  padding y of 10 and on large screen, let make py-20 and on extra large screen, py-28, 
+
+lets give a spacing of gap-4 between the elements on small screeens and gap of 8 on large screens and 12 
+
+
+on extra large screens. 
+
+
+we can also give it a border, let set the border color to border black
+
+
+let's tart with the left column by creating a div with a class of lg:basis-3/5 to give the flex basis on the left will be 3/5 and py-10 for padding top and bottom. 
+
+
+let have our first subtitlte h5 with a class of text-neutral 400 and text WELCOME TO MY WORLD. 
+for this hand emoji, got to emojipedia.com, copy and paste beside the text. so simple right.
+
+
+under the h5, let have a div with a classname of text-4xl on small screens, while on medium screens let use text-6xl, let's make the font color text-neutral-50 across all screen and give it a font weight of bold and margin top of 8. we can change the text color on dark mode and give it mt-8 for margin top 8
+
+
+inside of this div, let have an h2 with a class of my 4 that going to say Hi, I'm Janto pee.
+in order to change the color of an inner text, we can wrap it with a span tag with a class of text-secondary-500 and as you can see the result in the browser
+
+
+if you check the demo, you wil see this large stunning text with typewriter effect. This is made available by a package called Typewritter effect.
+
+this was part of the package we installed earlier so lets say
+
+Typewriter, you can automatically import as provided by the intellisense,
+
+but if automatic import isnt working, then manually type import typewriter from 'typewritereffect as seen
+
+now let's copy the options from the documentation and paste in our editor
+we can change the hello to - a software engineer
+then change the world to - s DevOps Engineer
+
+lets save this and we can see the stunning text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========== icon ==================
+
+
+lets have a div and inside here, lets have a p tag with a class of upercase margin top 8, lg:mt-30 to increase the margin top on large screen and a mb-8. 
+the text here can be Find with me
+
+
+lets have a div tage under the p with a class of flex items-center justify-between and gap 4
+
+this is going to be a container for the three icons
+
+for the first icon, create a p tag with a class of p-4 rounded-md border border-neutral-900 button-box-shadow 
+
+now lets go to react icons, search for facebook, copy the iport statement and paste to top, then copy the icon and paste in the p tag
+
+we can add a class of text-lg to increase the size
+
+we can duplicate the p tag and change the icons one after the other.
+
+let's make this icon AiOutline Twitter, dont forget to import AiOutline from react icons slash ai
+
+the next icon can be changed to instagram then enter to automatically import
+
+
+we can duplicate this icon group, change the text and icons.
+
+lets make this icon AiFillGithub with a text-yelow-500 to change the text color
+
+This can be changed to AiOutline dribble with a color of text-green 500
+
+and the last icon can be changed to behance with text color to text-purple 
+
+
+if we save this, we can see that this looks good
+
+
+Now as our code gets bigger, it becomes difficult to read, we can easily make this icon part into its own component and reuse in other sections such as footer.
+
+Separating code into smaller reusable components helps to imrpove code reusablity and enhance producivity. ALso, components can be tested separetd making it easier to resolve issues.
+
+so cut this icon part, create a icon.tsx file inside the hero, rafce for snippets, let's creat a single empty tag and paste the icon part
+
+The red lines under each icons means that the icons are undefined in this icon.tsx, therefore we need to copy the import statements from the previous file and paste here
+
+and now the red lines are gone.
+
+Lets do something even more interesting, we can condiditionally render this items to display or hide components based on the state or properties of a component.
+
+in this case, we are going to recieve four props that will helps us to continally render this item.
+
+this props will be item1, item2, title1, title2 of type IconInterface
+
+lets create the IconInterface
+interface IconInterface curly brackets, 
+
+now lets define the type of each props
+
+item1 of type boolean. the question mark in typescript is used to define an arguement as optional.
+
+so this means that, item 1 is optional.
+
+lets set other properties to booleanitem2 of boolean,
+
+title 1 of 
+
+title2 of 
+
+lets seperate the two icon groups with comment, now we can conditionally render each icon group and title based on whether or not each property was passed
+
+for the first icon group, lets have a curly bracket, then lets say item1 && this symbol is a logical operator to render an item when condition is met, for instance when item1 is passed, it will render the item 1 group
+lets have the parenthesis and paste the item1 group
+
+lets do the same for the second item group.
+
+
+
+Lets us conditionally render the title in each item group using another method. 
+
+to render this, we are going to use the template string method.
+
+template strings are literals delimited with backtick charcters and can contain expressions that can be evaluated
+
+so lets have curly braces and backets, good
+
+now lets have our expression dollar sign curly braces title 1 and the tenary operator. iftitle1 is true, add a class of block, else add a class of hidden to hide it
+
+lets copy just this part and paste in item 2, now change item1 to item2
+
+Now lets use this component in the hero.tsx,
+
+we'll create the Icon tag, and pass the item1 and title1 as props
+
+we can repeat this and pass item2 and ititle 2.
+
+Now you can see that it still works
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================ RESUME =================
+
+we are going to use a package called react vertical timeline component
+
+this package wil help us with the stunning resume timeline. so lets copy the import statements and paste on top of the file, 
+
+nextis to copy the timeline code and we can edit the timeline one after the other by first editing the icons.
+
+lets give it an icon of CheckBackIcon from hero icon.
+
+so lets start to edit the component one after the other
+
+
+
+
+
+
+
+
+=============================================================== CONTACT 
+
+inside of the src folder, create a folder named utils for utility and a file named formvalidation.tsx 
+
+inside here, we are going to write our form validation logic just as itis here on the formik documentation
+
+so lets import everything from yup.
+
+yup is a react validation library that was installed earlier to be used alongside with formik
+
+lets start by creating the interface for the form values.
+
+lets say export intercae form values, curly bracket 
+
+firstname of type string.........................
+
+
+
+
+now export validationSchema = Yup.Object.shape((
+
+        inside of here,
+))
+
+
+
+havingcompleted the yup validation logic,
+
+let import { Field, Formik, FormikHelpers, FormikValues } from "formik";
+
+
+
+lets visit the documentation again, here look at this initial values, so now lets declare our own initial values
+
+const initial values  of type FormValues, remember that the form values is coming from the interface we definded in the utils/formvalidation.tsx
+
+initialize firstname to empty string, lastname to empty string ....
+
+good
+
+
+lets wrap our form with the Formik tag as seen here, so we say
+
+Formik.
+
+Formik will take three attributes, 
+
+        initialVlues = initialValues declared above and 
+        
+        validationSchema=validationSchema comingfrom utils/formvalidation. 
+        
+        and the 3rd attribute is onSubit = handlesubmit.
+
+
+This handlesubmit does not exist, so lets create a function handlesubmit
+
+
+const handlesubmit  arrow function to console.log().
+
+As seen on the docs, this handlesubmit will recieve an argument, lets call this values of types FormikValues.
+
+then curly braces setSubmitting of type formikhelpers then formvalues 
+
+inside of the function lets use settime to make itmore responsive.
+
+settimeout will call the functions after a numberof milliseconds, for instance 500 milliseconds
+
+we can remove the console.log for now and use setTimeOut
+
+inside the setout, we can  consle.log(values), setSubmitting to false
+
+
+
+
+
+If you look at the form, Formiks gives us some parameters that will be useful to control our form. So lets do this right away,
+
+inside of the Formik tag, letuse curly brackets and braces to return the form.
+
+these parameters are 
+  isSubmitting,
+          values,
+          touched,
+          handleChange,
+          handleBlur,
+          errors,
+          handleSubmit,
+which will be used in the form
+ 
+
+now lets use this parameters
+
+let proceed to change all input tag to , then change the textarea to Field as textarea
+
+for the button part, we can disable    if issubmitting is true
+
+
+
+
+
+
+
+
+
+inside of the label, lethave a span tag with a class of text-neutral-400 and uppercase to display the first name
+
+now, we can change the label classname to text red 500 to display an error message
+
+lets have curly brackets errors.message the logical && and touched.firstname && errors.firstname}
+
+the error message will be displayed if this statement only evaluates to be true
+
+
+in the formik input field, let give it an 
+  onChange property of ={handleChange}
+                  onBlur={handleBlur}
+                  value={values.firstname}
+
+lets do the same in other field
+first is the span of lastname, change the label class to text-red-, output the error message for last name, copy and paste the field section,
+
+letdo the same for othersection such as the email, subject, message
+
+
+we can change the field back to input 
+
+
+
+Before we wrap up the rom section, how do we know if the form succesfully submit?
+we can do this by displayinga toast message on successful submission.
+
+therefore we are goingto use a package called react toastify. we have this installed. so lets import
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+just as itis on the documehtation, we will place the toast inside the settimeout after the logic is succesful.
+lethave a toast to tell us the form was successfully submitted
+
+finally, we can add the  ToastContainer to the Form.
+
+
+we can add some classes here, lets say py-10
+
+and everything looks good
+
+we can test this by clickinghere. imeediately we touch the field and leave the space, it will display the error message
